@@ -1,18 +1,30 @@
 module.exports = ()=> {
-    let srcClient = './src/client/';
-    let outClient = './out/client/';
-    let outStyles = outClient+'styles/';
-    let outJs = outClient+'javascript/';
+    let srcClientPath = './src/client/';
+    let outClientPath = './out/client/';
+    let outStylesPath = outClientPath + 'styles/';
+    let outJsPath = outClientPath + 'javascript/';
+    let srcStylesPath = srcClientPath + 'styles/';
+    let srcJsPath = srcClientPath + 'javascript/';
+    let srcTempPath = srcClientPath + 'temp/';
+    let srcSpecFiles = ['./src/server/controllers/**/*spec.js'];
     let index = 'index.html';
+    let srcServer = './src/server/';
+    let srcServerIndex = srcServer + 'index.js';
     return {
+        defaultPort:5000,
+        browserReloadDelay:1000,
+        srcIndexFile: srcClientPath + index,
+        srcCssFiles: [srcTempPath + '**/*.css'],
+        outJsFiles: [outJsPath + '**/*.js'],
+        srcJsFiles: [srcJsPath + '**/*.js'],
+        lessStyleFiles: srcStylesPath + '**/*.less',
+
         srcFiles:['./src/**/*.js','./*.js'],
-        lessStyles: srcClient + 'styles/styles.less',
-        outStyles: outStyles,
-        css: [outStyles +'**/*.css'],
-        js: [srcClient + 'javascript/**/*.js'],
-        srcIndex: srcClient + index,
-        outClient: outClient,
-        srcClient: srcClient,
-        outJs:outJs
+        srcTempPath:srcTempPath,
+        srcSpecFiles:srcSpecFiles,
+        outJsPath:outJsPath,
+        srcClientPath: srcClientPath,
+        srcServer:srcServer,
+        srcServerIndex:srcServerIndex
     };
 };

@@ -1,3 +1,3 @@
-(()=>{
-    console.log("Client: javascript file");
+(()=> {
+    console.log('Client: javascript file');
 })();
