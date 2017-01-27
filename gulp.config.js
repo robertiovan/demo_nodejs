@@ -15,16 +15,20 @@ module.exports = ()=> {
         browserReloadDelay:1000,
         srcIndexFile: srcClientPath + index,
         srcCssFiles: [srcTempPath + '**/*.css'],
+        srcJsBuildFiles: [srcTempPath + '**/*.js'],
         outJsFiles: [outJsPath + '**/*.js'],
         srcJsFiles: [srcJsPath + '**/*.js'],
         lessStyleFiles: srcStylesPath + '**/*.less',
-
+        packages:['./package.json'],
         srcFiles:['./src/**/*.js','./*.js'],
         srcTempPath:srcTempPath,
         srcSpecFiles:srcSpecFiles,
         outJsPath:outJsPath,
         srcClientPath: srcClientPath,
         srcServer:srcServer,
-        srcServerIndex:srcServerIndex
+        srcServerIndex:srcServerIndex,
+        outStylesPath:outStylesPath,
+        outClientPath:outClientPath,
+        root:'./'
     };
 };
