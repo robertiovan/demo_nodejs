@@ -13,12 +13,27 @@
 </head>
 <body>
 <div>
-    Test : debugging on client...123
     <div>
-        <span>Authentication</span>
+        <div>Local authentication : </div>
+        <br>
+        <form name="signInForm" action="/auth/local" method="post" >
+            <div>
+                <div><label for="userName">User: </label><input type="text" name="username" id="username"></div>
+                <div><label for="password">Pass: </label><input type="password" name="password" id="password"></div>
+                <div><input type="submit" value="Login local"></div>
+            </div>
+        </form>
+    </div>
+    <hr>
+    <div>
+        <span>Authentication Oath2 : </span>
         <ul>
             <li><a href="/auth/google">Authenticate with google</a></li>
+            <li><a href="/auth/twitter">Authenticate with twitter</a></li>
+            <li><a href="/auth/facebook">Authenticate with facebook</a></li>
         </ul>
+        to do ... github and linkedin
+
     </div>
 </div>
 <script type="application/javascript">
